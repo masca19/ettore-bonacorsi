@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "bonacorsiEcommerceApi",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authbonacorsiecommerce948f9a3a",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
