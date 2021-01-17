@@ -102,7 +102,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-amplify3fdec39843034-staging-91409-deployment",
-          "S3Key": "amplify-builds/bonacorsiecommerce948f9a3aPostConfirmation-584d66654a4468656c52-build.zip"
+          "S3Key": "amplify-builds/bonacorsiecommerce948f9a3aPostConfirmation-577247477458486f2f63-build.zip"
         }
       }
     },
