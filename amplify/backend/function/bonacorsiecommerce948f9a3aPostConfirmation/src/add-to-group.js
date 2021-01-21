@@ -5,7 +5,7 @@ exports.handler = async (event, context, callback) => {
   const cognitoidentityserviceprovider = new aws.CognitoIdentityServiceProvider({ apiVersion: '2016-04-18' });
 
   // Here, update the array to include the Admin emails you would like to use
-  let adminEmails = ["alelelli.98@gmail.com"], isAdmin = false
+  let adminEmails = ["alelelli.98@gmail.com", "francesco.mas19@live.it"], isAdmin = false
 
   if (adminEmails.indexOf(event.request.userAttributes.email) !== -1) {
     isAdmin = true
