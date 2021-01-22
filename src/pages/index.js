@@ -2,19 +2,17 @@ import React from "react"
 
 import SEO from "../components/seo"
 import { Center, Footer, Tag, Showcase, DisplaySmall, DisplayMedium } from '../components'
-import CartLink from '../components/CartLink'
 import { titleIfy, slugify } from '../../utils/helpers'
 
 import { graphql } from 'gatsby'
 
 const Home = ({ data: gqlData }) => {
-  const { inventoryInfo, categoryInfo: { data }} = gqlData
+  const { inventoryInfo, categoryInfo: { data } } = gqlData
   const categories = data.slice(0, 2)
   const inventory = inventoryInfo.data.slice(0, 4)
 
   return (
     <>
-      <CartLink />
       <SEO title="Home" />
       <div className="w-full">
         <div className="bg-green-200
@@ -36,10 +34,10 @@ const Home = ({ data: gqlData }) => {
             />
           </div>
           <div className="flex flex-1 justify-center items-center relative">
-              <Showcase
-                imageSrc={inventory[2].image}
-              />
-              <div className="absolute
+            <Showcase
+              imageSrc={inventory[2].image}
+            />
+            <div className="absolute
               w-48 h-48 sm:w-72 sm:h-72 xl:w-88 xl:h-88
               bg-white z-0 rounded-full" />
           </div>

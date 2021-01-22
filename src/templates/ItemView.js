@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Popup from 'reactjs-popup'
 
 import { SiteContext, ContextProviderComponent } from '../context/mainContext'
-import CartLink from '../components/CartLink'
 import Button from '../components/Button'
 import Image from '../components/Image'
 import QuantityPicker from '../components/QuantityPicker'
@@ -11,9 +10,9 @@ const ItemView = (props) => {
   const [numberOfitems, updateNumberOfItems] = useState(1)
   const item = props.pageContext.content
   const { price, image, name, description } = item
-  const { context: { addToCart }} = props
+  const { context: { addToCart } } = props
 
-  function addItemToCart (item) {
+  function addItemToCart(item) {
     item["quantity"] = numberOfitems
     addToCart(item)
   }
@@ -29,7 +28,6 @@ const ItemView = (props) => {
 
   return (
     <>
-      <CartLink />
       <div className="py-12 flex flex-1 flex-col
       md:flex-row
       w-full
@@ -69,7 +67,7 @@ function ItemViewWithContext(props) {
     <ContextProviderComponent>
       <SiteContext.Consumer>
         {
-          context =>  <ItemView {...props} context={context} />
+          context => <ItemView {...props} context={context} />
         }
       </SiteContext.Consumer>
     </ContextProviderComponent>
