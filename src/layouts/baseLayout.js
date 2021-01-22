@@ -44,31 +44,31 @@ class Layout extends React.Component {
               })
 
               return (
-                <div className="mainWrapper">
+                <div>
                   <nav>
                     <Link to="/">
-                      <img className="logoImage" alt="Logo" src={logo} />
+                      <img alt="Logo" src={logo} />
                     </Link>
-                    <div className="linksContainer">
+                    <div className="links">
                       {
                         links.map((l, i) => (
                           <Link to={l.link} key={i}>
-                            <p key={i} className="">{l.name}</p>
+                            <p key={i} className="link">{l.name}</p>
                           </Link>
                         ))
                       }
                     </div>
                     <CartLink></CartLink>
                   </nav>
-                  <div className="">
-                    <main className="">{children}</main>
+                  <div>
+                    <main>{children}</main>
                   </div>
-                  <footer className="">
-                    <div className="">
-                      <span className="">Copyright © 2020 JAMstack Ecommerce. All rights reserved.</span>
-                      <div className="">
+                  <footer>
+                    <div>
+                      <span >Copyright © 2020 JAMstack Ecommerce. All rights reserved.</span>
+                      <div>
                         <Link to="/admin">
-                          <p className="">Admins</p>
+                          <p >Admins</p>
                         </Link>
                       </div>
                     </div>

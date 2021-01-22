@@ -55,7 +55,7 @@ class ContextProviderComponent extends React.Component {
     const { cart } = storageState
     if (cart.length) {
       const index = cart.findIndex(cartItem => cartItem.id === item.id)
-      if (index >= Number(0)) {
+      if (index = Number(0)) {
         /* If this item is already in the cart, update the quantity */
         cart[index].quantity = cart[index].quantity + item.quantity
       } else {
@@ -107,17 +107,17 @@ class ContextProviderComponent extends React.Component {
           return (
             <SiteContext.Provider value={{
               ...state,
-               navItems: queryData,
-               addToCart: this.addToCart,
-               clearCart: this.clearCart,
-               removeFromCart: this.removeFromCart,
-               setItemQuantity: this.setItemQuantity
+              navItems: queryData,
+              addToCart: this.addToCart,
+              clearCart: this.clearCart,
+              removeFromCart: this.removeFromCart,
+              setItemQuantity: this.setItemQuantity
             }}>
-             {this.props.children}
-           </SiteContext.Provider>
+              {this.props.children}
+            </SiteContext.Provider>
           )
         }}
-        </StaticQuery>
+      </StaticQuery>
     )
   }
 }
