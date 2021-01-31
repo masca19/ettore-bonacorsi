@@ -38,24 +38,24 @@ class AddInventory extends React.Component {
     return (
       <div>
         <h3>Add Item</h3>
-        <div className="flex flex-1 justify-center">
-          <div className="w-full max-w-144">
-            <form className="bg-white shadow-xs rounded px-8 pt-6 pb-8 mb-4">
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+        <div>
+          <div>
+            <form>
+              <div>
+                <label htmlFor="name">
                   Item name
                 </label>
                 <input
                   onChange={this.onChange}
-                  value={name} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Item name" name="name" />
+                  value={name} id="name" type="text" placeholder="Item name" name="name" />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="price">
+                <label htmlFor="price">
                   Item price
                 </label>
                 <input
                   onChange={this.onChange}
-                  value={price} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="price" type="text" placeholder="Item price" name="price" />
+                  value={price} id="price" type="text" placeholder="Item price" name="price" />
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
@@ -63,10 +63,10 @@ class AddInventory extends React.Component {
                 </label>
                 <input
                   onChange={this.onChange}
-                  value={description} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="description" placeholder="Item Description" name="description" />
+                  value={description} id="description" placeholder="Item Description" name="description" />
               </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="item image">
+              <div>
+                <label htmlFor="item image">
                   Item image
                 </label>
                 <input
@@ -74,40 +74,40 @@ class AddInventory extends React.Component {
                   onChange={(e) => this.onImageChange(e)}
                 />
               </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="currentInventory">
+              <div>
+                <label htmlFor="currentInventory">
                   In stock
                 </label>
                 <input
                   onChange={this.onChange}
-                  value={currentInventory} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="currentInventory" placeholder="Items in stock" name="currentInventory" />
+                  value={currentInventory} id="currentInventory" placeholder="Items in stock" name="currentInventory" />
               </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="categories">
+              <div>
+                <label htmlFor="categories">
                   Item categories
                 </label>
                 <input
                   onChange={this.onChange}
-                  value={categories} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="categories" placeholder="Comma separated list of item categories" name="categories" />
+                  value={categories} id="categories" placeholder="Comma separated list of item categories" name="categories" />
               </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="brand">
+              <div>
+                <label htmlFor="brand">
                   Item brand
                 </label>
                 <input
                   onChange={this.onChange}
-                  value={brand} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="brand" placeholder="Item brand" name="brand" />
+                  value={brand} id="brand" placeholder="Item brand" name="brand" />
               </div>
-              <div className="flex items-center justify-between mt-4">
-                <button onClick={this.addItem} className="bg-secondary hover:bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+              <div>
+                <button onClick={this.addItem} type="button">
                   Add Item
                 </button>
-                <a onClick={this.clearForm} className="inline-block align-baseline font-bold text-sm" href="#">
+                <a onClick={this.clearForm} href="#">
                   Clear Form
                 </a>
               </div>
             </form>
-            <p className="text-center text-gray-500 text-xs">
+            <p>
               &copy;2020 JAMstack ECommerce. All rights reserved.
             </p>
           </div>

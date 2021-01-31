@@ -41,7 +41,6 @@ const Input = ({ onChange, value, name, placeholder }) => (
   <input
     onChange={onChange}
     value={value}
-    className="mt-2 text-sm shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
     type="text"
     placeholder={placeholder}
     name={name}

@@ -58,62 +58,62 @@ class ViewInventory extends React.Component {
             const isEditing = editingIndex === index
             if (isEditing) {
               return (
-                <div className="border-b py-10" key={item.id}>
-                  <div className="flex items-center">
+                <div key={item.id}>
+                  <div>
                     <Link to={slugify(item.name)}>
-                      <Image className="w-32 m-0" src={item.image} alt={item.name} />
+                      <Image src={item.image} alt={item.name} />
                     </Link>
                     <input
                       onChange={(e) => this.onChange(e, index)}
-                      className="ml-8 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    
                       value={currentItem.name}
                       placeholder="Item name"
                       name="name"
                     />
-                    <div className="flex flex-1 justify-end items-center">
-                      <p className="m-0 text-sm mr-2">In stock:</p>
+                    <div>
+                      <p>In stock:</p>
                       <input
                         onChange={this.onChange}
-                        className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      
                         value={currentItem.currentInventory}
                         name="currentInventory"
                         placeholder="Item inventory"
                       />
                       <input
                         onChange={this.onChange}
-                        className="ml-16 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      
                         value={currentItem.price}
                         name="price"
                         placeholder="Item price"
                       />
                     </div>
-                    <div role="button" onClick={() => this.saveItem(index)} className="m-0 ml-10 text-gray-900 text-s cursor-pointer">
-                      <p className="text-sm ml-10 m-0">Save</p>
+                    <div role="button" onClick={() => this.saveItem(index)}>
+                      <p>Save</p>
                     </div>
                   </div>
                 </div>
               )
             }
             return (
-              <div className="border-b py-10" key={item.id}>
-                <div className="flex items-center">
+              <div key={item.id}>
+                <div>
                   <Link to={slugify(item.name)}>
-                    <Image className="w-32 m-0" src={item.image} alt={item.name} />
+                    <Image src={item.image} alt={item.name} />
                   </Link>
                   <Link to={slugify(item.name)}>
-                    <p className="m-0 pl-10 text-gray-600 text-sm">
+                    <p>
                       {item.name}
                     </p>
                   </Link>
-                  <div className="flex flex-1 justify-end">
-                    <p className="m-0 pl-10 text-gray-900 tracking-tighter text-sm">In stock: {item.currentInventory}</p>
-                    <p className="m-0 pl-20 text-gray-900 tracking-tighter font-semibold">
+                  <div>
+                    <p>In stock: {item.currentInventory}</p>
+                    <p>
                       {DENOMINATION + item.price}
                     </p>
                   </div>
-                  <div className="flex items-center m-0 ml-10 text-gray-900 text-s cursor-pointer">
+                  <div>
                     <FaTimes onClick={() => this.deleteItem(index)} />
-                    <p role="button" onClick={() => this.editItem(item, index)} className="text-sm ml-10 m-0">Edit</p>
+                    <p role="button" onClick={() => this.editItem(item, index)}>Edit</p>
                   </div>
                 </div>
               </div>

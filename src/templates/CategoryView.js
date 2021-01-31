@@ -6,14 +6,14 @@ const CategoryView = (props) => {
   const { pageContext: { title, content: { items = [] } } } = props
   return (
     <>
-      <div className="flex flex-col items-center">
-        <div className="max-w-fw flex flex-col">
-          <div className="pt-10 pb-8">
-            <h1 className="text-5xl font-light">{titleIfy(title)}</h1>
+      <div>
+        <div>
+          <div>
+            <h1>{titleIfy(title)}</h1>
           </div>
 
           <div>
-            <div className="flex flex-1 flex-wrap flex-row">
+            <div>
               {
                 items.map((item, index) => {
                   return (
