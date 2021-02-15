@@ -1,5 +1,4 @@
 import React from 'react'
-import getInventory, { DENOMINATION } from '../../providers/inventoryProvider'
 import Image from '../components/Image'
 import { Link } from 'gatsby'
 import { slugify } from '../../utils/helpers'
@@ -7,6 +6,7 @@ import { FaTimes } from 'react-icons/fa'
 import { API, graphqlOperation } from 'aws-amplify'
 import { listProducts } from '../graphql/queries'
 import { updateProduct, deleteProduct } from '../graphql/mutations'
+const DENOMINATION = '$'
 
 class ViewInventory extends React.Component {
   state = {

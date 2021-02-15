@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { DENOMINATION } from '../../providers/inventoryProvider'
 import Image from './Image'
+const DENOMINATION = '$';
 
 const ListItem = ({ link, title, imageSrc, price }) =>  (
   <div className="
