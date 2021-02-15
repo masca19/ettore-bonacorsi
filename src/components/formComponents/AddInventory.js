@@ -49,7 +49,7 @@ class AddInventory extends React.Component {
                   onChange={this.onChange}
                   value={name} id="name" type="text" placeholder="Item name" name="name" />
               </div>
-              <div className="mb-4">
+              <div>
                 <label htmlFor="price">
                   Item price
                 </label>
@@ -57,8 +57,8 @@ class AddInventory extends React.Component {
                   onChange={this.onChange}
                   value={price} id="price" type="text" placeholder="Item price" name="price" />
               </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
+              <div>
+                <label htmlFor="description">
                   Item Description
                 </label>
                 <input
