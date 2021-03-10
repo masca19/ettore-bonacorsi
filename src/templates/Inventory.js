@@ -13,9 +13,9 @@ class Inventory extends React.Component {
      return (
        <div>
           <h3>Inventory</h3>
-          <div>
-            <p role="button" onClick={() => this.toggleViewState('view')}>View</p>
-            <p role="button" onClick={() => this.toggleViewState('add')}>Add</p>
+          <div className="flex">
+            <button onClick={() => this.toggleViewState('view')}>View</button>
+            <button onClick={() => this.toggleViewState('add')}>Add</button>
           </div>
           {
             this.state.viewState === 'view' ? (

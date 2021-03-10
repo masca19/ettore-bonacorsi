@@ -1,12 +1,11 @@
 import React from 'react'
-
 import { SiteContext, ContextProviderComponent } from '../context/mainContext'
-import { DENOMINATION } from '../../providers/inventoryProvider'
 import { FaTimes, FaLongArrowAltRight } from 'react-icons/fa'
 import { Link } from 'gatsby'
 import QuantityPicker from '../components/QuantityPicker'
 import { slugify } from '../../utils/helpers'
 import Image from '../components/Image'
+const DENOMINATION = '€';
 
 const Cart = ({ context }) => {
   const {
@@ -66,9 +65,9 @@ const Cart = ({ context }) => {
                                   {DENOMINATION + item.price}
                                 </p>
                               </div>
-                              <div role="button" onClick={() => removeFromCart(item)}>
+                              <button onClick={() => removeFromCart(item)}>
                                 <FaTimes />
-                              </div>
+                              </button>
                             </div>
 
                             { /* Responsive - Mobile */}

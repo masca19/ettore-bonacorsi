@@ -1,5 +1,4 @@
 import React from 'react'
-import getInventory, { DENOMINATION } from '../../providers/inventoryProvider'
 import Image from '../components/Image'
 import { Link } from 'gatsby'
 import { slugify } from '../../utils/helpers'
@@ -7,6 +6,7 @@ import { FaTimes } from 'react-icons/fa'
 import { API, graphqlOperation } from 'aws-amplify'
 import { listProducts } from '../graphql/queries'
 import { updateProduct, deleteProduct } from '../graphql/mutations'
+const DENOMINATION = '$'
 
 class ViewInventory extends React.Component {
   state = {
@@ -87,9 +87,9 @@ class ViewInventory extends React.Component {
                         placeholder="Item price"
                       />
                     </div>
-                    <div role="button" onClick={() => this.saveItem(index)}>
+                    <button onClick={() => this.saveItem(index)}>
                       <p>Save</p>
-                    </div>
+                    </button>
                   </div>
                 </div>
               )
@@ -113,7 +113,7 @@ class ViewInventory extends React.Component {
                   </div>
                   <div>
                     <FaTimes onClick={() => this.deleteItem(index)} />
-                    <p role="button" onClick={() => this.editItem(item, index)}>Edit</p>
+                    <button onClick={() => this.editItem(item, index)}>Edit</button>
                   </div>
                 </div>
               </div>

@@ -1,12 +1,9 @@
 import React, { useState } from "react"
-
 import { SiteContext, ContextProviderComponent } from "../context/mainContext"
-import { DENOMINATION } from "../../providers/inventoryProvider"
 import { FaLongArrowAltLeft } from "react-icons/fa"
 import { Link } from "gatsby"
 import Image from "../components/Image"
 import uuid from "uuid/v4"
-
 import {
   CardElement,
   Elements,
@@ -14,6 +11,7 @@ import {
   useElements,
 } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
+const DENOMINATION = '€'
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -241,7 +239,6 @@ const Checkout = ({ context }) => {
                     type="submit"
                     disabled={!stripe}
                     onClick={handleSubmit}
-                    type="button"
                   >
                     Confirm order
                 </button>
