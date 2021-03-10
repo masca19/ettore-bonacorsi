@@ -66,10 +66,10 @@ class Admin extends React.Component {
     }
 
     return (
-      <div className="flex flex-col">
-        <div className="max-w-fw flex flex-col">
-          <div className="pt-10">
-            <h1 className="text-5xl font-light">Admin Panel</h1>
+      <div>
+        <div>
+          <div>
+            <h1>Admin Panel</h1>
           </div>
           {
             renderForm(formState)

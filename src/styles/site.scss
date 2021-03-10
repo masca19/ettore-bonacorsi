@@ -1,0 +1,12 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  .links {
+    display: flex;
+
+    .link {
+      padding: 15px;
+    }
+  }
+}
