@@ -87,9 +87,9 @@ class ViewInventory extends React.Component {
                         placeholder="Item price"
                       />
                     </div>
-                    <div role="button" onClick={() => this.saveItem(index)} className="m-0 ml-10 text-gray-900 text-s cursor-pointer">
+                    <button onClick={() => this.saveItem(index)} className="m-0 ml-10 text-gray-900 text-s cursor-pointer">
                       <p className="text-sm ml-10 m-0">Save</p>
-                    </div>
+                    </button>
                   </div>
                 </div>
               )
@@ -113,7 +113,7 @@ class ViewInventory extends React.Component {
                   </div>
                   <div className="flex items-center m-0 ml-10 text-gray-900 text-s cursor-pointer">
                     <FaTimes onClick={() => this.deleteItem(index)} />
-                    <p role="button" onClick={() => this.editItem(item, index)} className="text-sm ml-10 m-0">Edit</p>
+                    <button onClick={() => this.editItem(item, index)} className="text-sm ml-10 m-0">Edit</button>
                   </div>
                 </div>
               </div>
