@@ -1,0 +1,32 @@
+@import '../../styles/colors';
+
+.footer {
+  background-color: $dark;
+
+  &-container {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 10px 40px 40px 40px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  &-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      color: $white;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      padding: 20px 0;
+    }
+
+    &-link {
+      color: $green;
+      text-decoration: none;
+    }
+  }
+}

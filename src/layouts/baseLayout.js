@@ -13,6 +13,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify';
 import { colors } from '../theme'
 import CartLink from '../components/CartLink'
+import Footer from '../components/Footer'
 
 toast.configure({
   progressStyle: {
@@ -63,16 +64,7 @@ class Layout extends React.Component {
                   <div>
                     <main>{children}</main>
                   </div>
-                  <footer>
-                    <div>
-                      <span >Copyright © 2020 JAMstack Ecommerce. All rights reserved.</span>
-                      <div>
-                        <Link to="/admin">
-                          <p >Admins</p>
-                        </Link>
-                      </div>
-                    </div>
-                  </footer>
+                  <Footer></Footer>
                 </div>
               )
             }
