@@ -1,4 +1,4 @@
-@import '../../styles/colors';
+@import "../../styles/colors";
 
 .footer {
   background-color: $dark;
@@ -8,12 +8,12 @@
     margin: 0 auto;
     padding: 10px 40px 40px 40px;
     display: flex;
+    flex-wrap: wrap;
     flex-grow: 1;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   &-column {
-    flex: 1;
     display: flex;
     flex-direction: column;
 
@@ -24,9 +24,25 @@
       padding: 20px 0;
     }
 
+    &.social {
+      align-items: center;
+    }
+
     &-link {
       color: $green;
       text-decoration: none;
+
+      svg {
+        fill: $white;
+        width: 27px;
+        height: 27px;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-column {
+    width: 100%;
   }
 }
