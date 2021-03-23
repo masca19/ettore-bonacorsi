@@ -12,6 +12,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /static/,
+        },
+      },
+    },
     `gatsby-plugin-stripe`,
     `gatsby-plugin-react-helmet`,
     {
