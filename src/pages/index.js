@@ -23,8 +23,8 @@ const Home = ({ data: gqlData }) => {
             />
             <Center
               price="200"
-              title={inventory[2].name}
-              link={slugify(inventory[2].name)}
+              title={inventory[0].name}
+              link={slugify(inventory[0].name)}
             />
             <Footer
               designer="Jason Bourne"
@@ -32,7 +32,7 @@ const Home = ({ data: gqlData }) => {
           </div>
           <div >
             <Showcase
-              imageSrc={inventory[2].image}
+              imageSrc={inventory[0].image}
             />
             <div />
           </div>
@@ -40,7 +40,7 @@ const Home = ({ data: gqlData }) => {
       </div>
       <div >
         <DisplayMedium imageSrc={categories[0].image} subtitle={`${categories[0].itemCount} items`} title={titleIfy(categories[0].name)} link={slugify(categories[0].name)} />
-        <DisplayMedium imageSrc={categories[1].image} subtitle={`${categories[1].itemCount} items`} title={titleIfy(categories[1].name)} link={slugify(categories[1].name)} />
+        <DisplayMedium imageSrc={categories[0].image} subtitle={`${categories[0].itemCount} items`} title={titleIfy(categories[0].name)} link={slugify(categories[0].name)} />
       </div>
       <div >
         <h2 >Trending Now</h2>
@@ -49,11 +49,11 @@ const Home = ({ data: gqlData }) => {
       <div >
         <DisplaySmall imageSrc={inventory[0].image} title={inventory[0].name} subtitle={inventory[0].categories[0]} link={slugify(inventory[0].name)} />
 
-        <DisplaySmall imageSrc={inventory[1].image} title={inventory[1].name} subtitle={inventory[1].categories[0]} link={slugify(inventory[1].name)} />
+        <DisplaySmall imageSrc={inventory[0].image} title={inventory[0].name} subtitle={inventory[0].categories[0]} link={slugify(inventory[0].name)} />
 
-        <DisplaySmall imageSrc={inventory[2].image} title={inventory[2].name} subtitle={inventory[2].categories[0]} link={slugify(inventory[2].name)} />
+        <DisplaySmall imageSrc={inventory[0].image} title={inventory[0].name} subtitle={inventory[0].categories[0]} link={slugify(inventory[0].name)} />
 
-        <DisplaySmall imageSrc={inventory[3].image} title={inventory[3].name} subtitle={inventory[3].categories[0]} link={slugify(inventory[3].name)} />
+        <DisplaySmall imageSrc={inventory[0].image} title={inventory[0].name} subtitle={inventory[0].categories[0]} link={slugify(inventory[0].name)} />
       </div>
     </>
   )
